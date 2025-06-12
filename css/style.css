@@ -1,0 +1,669 @@
+@charset "UTF-8";
+
+.sm {
+  display: inline-block;
+}
+
+.pc {
+  display: none;
+}
+
+body {
+  color: #ffffff;
+  font-family: "DotGothic16", sans-serif;
+  text-align: center;
+}
+
+header {
+  background: #00000063;
+}
+
+.nav.nav-justified {
+  flex-wrap: nowrap
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-link:focus {
+  color: #fff;
+}
+
+.nav-link {
+  color: #fff;
+  text-align: center;
+}
+
+.nav-link.disabled {
+  color: #6c6c6c;
+}
+
+#nav-brain {
+  padding: 20px;
+  width: 23%;
+  margin: auto;
+  background-image: url(../img/Brain.svg);
+  background-repeat: no-repeat;
+}
+
+#nav-black {
+  padding: 20px;
+  width: 23%;
+  margin: auto;
+  background-image: url(../img/Photo.svg);
+  background-repeat: no-repeat;
+}
+
+#nav-parli {
+  padding: 20px;
+  width: 23%;
+  margin: auto;
+  background-image: url(../img/Book.svg);
+  background-repeat: no-repeat;
+}
+
+#nav-lonely {
+  padding: 20px;
+  width: 23%;
+  margin: auto;
+  background-image: url(../img/Plush.svg);
+  background-repeat: no-repeat;
+}
+
+.topPage {
+  background: #300;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  padding-top: 30px;
+  font-family: "Slackside One", cursive;
+}
+
+h3 {
+  padding-bottom: 20px;
+}
+
+h2 p {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.15em;
+}
+
+#Brain {
+  width: 80%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.linkList {
+  padding: 0 20px;
+  color: black;
+}
+
+.linkList li {
+  margin-bottom: 20px;
+}
+
+.linkList li a {
+  display: block;
+  background-color: #ffffff;
+  padding: 12px 15px 10px;
+}
+
+.linkList li a span {
+  display: block;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+footer {
+  background-color: #00000063;
+  bottom: 0;
+  padding: 10px 0;
+  color: #fff;
+}
+
+footer a {
+  display: inline-block;
+  width: auto;
+}
+
+[class^="text-"] {
+  margin: 10px 0 40px;
+}
+
+[class^="text-"] h2 {
+  font-size: 5vw;
+  color: #acacac;
+}
+
+#parlia {
+  background: url(../img/Parliament.png) center center / cover no-repeat fixed;
+}
+.underline{
+  text-decoration: underline;
+  color:#acacac;
+}
+
+#lonely{
+  background: url(../img/Lonely.png) center center / cover no-repeat fixed;
+}
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  text-align: center;
+  color: #fff;
+}
+
+/*タイピングアニメ*/
+#typewriter-text03 {
+  letter-spacing: 0.15em;
+}
+
+.end::after {
+  content: '';
+}
+
+.end.start::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .5;
+  }
+}
+
+/*tabの形状*/
+.tab {
+  display: flex;
+  justify-content: center;
+}
+
+.tab li a {
+  display: block;
+  margin: 0 2px;
+  padding: 10px 20px;
+  background: #00000063;
+}
+
+/*liにactiveクラスがついた時の形状*/
+.tab li.active a {
+  background: none;
+}
+
+/*エリアの表示非表示と形状*/
+.area {
+  display: none;
+  /*はじめは非表示*/
+  opacity: 0;
+  /*透過0*/
+
+  padding: 30px 20px;
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+.area.is-active {
+  display: block;
+  /*表示*/
+  animation-name: displayAnime;
+  /*ふわっと表示させるためのアニメーション*/
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/*リンクの形状*/
+#page-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4a4a4a;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.6rem;
+  transition: all 0.3s;
+}
+
+#page-top a img {
+  width: 60%;
+}
+
+#page-top a:active {
+  background: #6c6c6c;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
+  animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
+
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav {
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position: fixed;
+  z-index: 998;
+  /*ナビのスタート位置と形状*/
+  bottom: 0;
+  left: -120%;
+  width: 100%;
+  height: 100vh;
+  /*ナビの高さ*/
+  background: #0000007f;
+  /*動き*/
+  transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive {
+  left: 0;
+}
+
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list {
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 998;
+  width: 100%;
+  height: 100vh;
+  /*表示する高さ*/
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 998;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li {
+  list-style: none;
+  text-align: center;
+}
+
+#g-nav li label {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn {
+  position: fixed;
+  z-index: 999;
+  /*ボタンを最前面に*/
+  bottom: 10px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background: #4a4a4a url("../img/Light-off.svg") no-repeat center / 70%;
+}
+
+.openbtn.active {
+  background: #6c6c6c url("../img/Light-on.svg") no-repeat center / 70%;
+}
+
+input[type=radio] {
+  display: none;
+  /* ラジオボタンを非表示にする */
+}
+
+.changeble {
+  text-align: center;
+  color: white;
+}
+
+label {
+  margin: 0 10px;
+}
+
+.BGblack {
+  background: black;
+}
+
+.black {
+  background: #ffffff21;
+}
+
+.tab li a.changeble2.black {
+  background: #ffffff21;
+}
+
+.tab li.active a.changeble2.black {
+  background: none;
+}
+
+.BGwhite {
+  background: white;
+  color: black;
+}
+
+.BGgrey {
+  background: grey;
+}
+
+.BGred {
+  background: red;
+}
+
+.BGblue {
+  background: blue;
+}
+
+.BGgreen {
+  background: lime;
+  color: black;
+}
+
+.vrcPhoto {
+  padding: 15px;
+  background: #fff;
+}
+
+/* Modal Base */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+}
+.modal-bg {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 101;
+}
+
+/* Modal Content */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  z-index: 102;
+  font-family: "M PLUS Rounded 1c", serif;
+}
+@media screen and (max-width: 640px) {
+  .modal-content {
+    width: 80vw;
+  }
+}
+.modal-inner {
+  position: relative;
+  background: rgb(215, 215, 215);
+  width: 100%;
+  min-height: 100px;
+  max-height: 500px;
+  padding: 30px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color:black;
+  text-align: left;
+}
+
+/* Close Button */
+.btn_close {
+  display: block;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: black;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+  line-height: 35px;
+  z-index: 105;
+}
+.js-modal-open{
+  display:inline-block;
+  background: #4a4a4a;
+  padding: 50px 10px;
+  margin-bottom: 20px;
+  width:150px;
+  height:200px;
+  border-bottom: 10px solid white;
+  font-family: "M PLUS Rounded 1c", serif;
+}
+.BKblue{
+  background: rgb(30, 30, 180);
+}
+.BKgreen{
+  background: rgb(30, 180, 30);
+}
+.BKred{
+  background: rgb(180, 30, 30);
+}
+.game{
+  padding:10px 10px;
+  background:black;
+  padding: 3px 10px;
+  margin:0 auto;
+  margin-bottom: 20px;
+  width:210px;
+  height:200px;
+  border: 2px solid white;
+  border-left: 30px solid white;
+}
+.game-img{
+  width: 140px;
+}
+.game-title{
+  position: relative;
+  right:37px;
+  bottom:135px;
+  color: black;
+  letter-spacing: 0.1em;
+  writing-mode: vertical-rl;
+  text-orientation:upright;
+  font-weight: bold;
+}
+.add-br{
+  margin:10px 0;
+}
+@media screen and (min-width: 768px) {
+  .hes-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    columns: 3;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    columns: 3;
+  }
+}
+@media screen and (min-width: 920px) {
+  .sm {
+    display: none;
+  }
+
+  .pc {
+    display: inline-block;
+  }
+
+  #Brain {
+    width: 30vmin;
+  }
+
+  h2 p {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .linkList {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+  }
+
+  .linkList li {
+    flex-basis: 47%;
+    margin: 0 30px 20px;
+  }
+
+  .hes-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    columns: 5;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    columns: 5;
+  }
+
+  #nav-brain {
+    display: none;
+  }
+
+  #nav-black {
+    display: none;
+  }
+
+  #nav-parli {
+    display: none;
+  }
+
+  #nav-lonely {
+    display: none;
+  }
+
+  .vrcPhoto {
+    width: 30%;
+  }
+
+  .flex-L {
+    display: flex;
+    margin: 30px 100px;
+    justify-content: flex-start;
+  }
+  .flex-R {
+    display: flex;
+    margin: 30px 100px;
+    justify-content: flex-end;
+  }
+
+  .text-L {
+    display: inline-block;
+    text-align: left;
+    margin: 0 40px;
+  }
+  .text-R {
+    display: inline-block;
+    text-align: right;
+    margin: 0 40px;
+  }
+
+  [class^="text-"] h2 {
+    font-size: 25px;
+  }
+}

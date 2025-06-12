@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <title>Brain Atelier - BlackRoom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Slackside+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hes-gallery.css">
+  <link rel="icon" href="img/icon.ico" sizes="32x32" type="image/vnd.microsoft.icon">
+  <link rel="icon" href="img/icon.svg" sizes="any" type="image/svg+xml">
+</head>
+
+<body class="changeble BGblack">
+  <div id="splash">
+    <div id="splash_text"></div>
+    <!--/splash-->
+  </div>
+  <div id="container">
+    <header class="changeble2 black">
+      <ul class="nav nav-justified">
+        <li class="nav-item"><a class="nav-link" href="index.html">
+            <div id="nav-brain"></div>
+            Home
+          </a></li>
+        <li class="nav-item"><a class="nav-link" href="Black.html">
+            <div id="nav-black"></div>
+            Black
+          </a></li>
+        <li class="nav-item"><a class="nav-link" href="Parli.html">
+            <div id="nav-parli"></div>
+            Parlia
+          </a></li>
+        <li class="nav-item"><a class="nav-link" href="Lonely.html">
+            <div id="nav-lonely"></div>
+            Lonely
+          </a></li>
+      </ul>
+    </header>
+    <main>
+      <div class="openbtn"></div>
+      <nav id="g-nav">
+        <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+          <ul>
+            <li class="BGblack"><input type="radio" name="color" value="black" id="black" checked><label
+                for="black">Black</label></li>
+            <li class="BGwhite"><input type="radio" name="color" value="white" id="white"><label for="white"
+                style="color:black;">White</label></li>
+            <li class="BGgrey"><input type="radio" name="color" value="grey" id="grey"><label for="grey">Grey</label>
+            </li>
+            <li class="BGred"><input type="radio" name="color" value="red" id="red"><label for="red">Red</label></li>
+            <li class="BGblue"><input type="radio" name="color" value="blue" id="blue"><label for="blue">Blue</label>
+            </li>
+            <li class="BGgreen"><input type="radio" name="color" value="green" id="green"><label for="green"
+                style="color:black;">Green</label></li>
+          </ul>
+        </div>
+      </nav>
+      <h1>BlackRoom</h1>
+      <h2>
+        <p id="typewriter-text03" class="end start"></p><br>
+      </h2>
+      <ul class="tab">
+        <li><a href="#cloval" class="changeble2 black">Cloval</a></li>
+        <li><a href="#chocopie" class="changeble2 black">Chocopie</a></li>
+        <li><a href="#hoc" class="changeble2 black">HoC</a></li>
+        <li><a href="#etc" class="changeble2 black">Extra</a></li>
+      </ul>
+
+      <div id="cloval" class="area is-active">
+        <h3>クロバル【Cloval】</h3>
+        <ul>
+          <li>
+            <div class="hes-gallery" data-wrap="true" data-img-count="3">
+              <img src="img/album/Bluesky.JPG" alt="クローバー星とクロバル" data-subtext='Blueskyのアイコン用'>
+              <img src="img/album/PC_Cycle.jpg" alt="クロバル丸顔化" data-subtext='丸顔化'>
+              <img src="img/album/Baby.jpg" alt="クロバル赤ちゃん化" data-subtext='赤ちゃん化'>
+            </div>
+          </li>
+        </ul>
+        <!--/area-->
+      </div>
+
+      <div id="chocopie" class="area">
+
+        <h3>三角チョコパイ【TriangularChocopie】</h3>
+        <ul>
+          <li>
+            <div class="hes-gallery" data-wrap="true" data-img-count="2">
+              <img src="img/album/Facepie.jpg" alt="チョコパイ顔だけ" data-subtext='なんで描いた？'>
+              <img src="img/album/Evolve.jpg" alt="チョコパイの進化図4体" data-subtext='チョコパイの進化図（没）'>
+            </div>
+          </li>
+        </ul>
+        <!--/area-->
+      </div>
+
+      <div id="hoc" class="area">
+        <h3>サンギイン【HoC】</h3>
+        <ul>
+          <li>
+            <div class="hes-gallery" data-wrap="true" data-img-count="2">
+              <img src="img/album/HoC2.png" alt="サンギイン" data-subtext='リメイク'>
+              <img src="img/album/HoC1.png" alt="サンギイン" data-subtext='衝動描きで初めて描いた'>
+            </div>
+          </li>
+        </ul>
+        <!--/area-->
+      </div>
+
+      <div id="etc" class="area">
+        <h3>その他</h3>
+        <ul>
+          <li>
+            <div class="hes-gallery" data-wrap="true" data-img-count="1">
+              <img src="img/album/Halloween2024.jpg" alt="クロバルとチョコパイのハロウィン衣装" data-subtext='2024ハロウィン衣装'>
+            </div>
+          </li>
+        </ul>
+        <!--/area-->
+      </div>
+
+      <script src="js/hes-gallery.js"></script>
+      <script>
+        HesGallery.setOptions({
+          disableScrolling: false,
+          hostedStyles: false,
+          animations: true,
+          minResolution: 0,
+          showImageCount: true,
+          wrapAround: true
+        });
+      </script>
+
+      <p id="page-top"><a href="#"><img src="img/Up.svg" alt="PageTop"></a></p>
+    </main>
+    <footer id="footer" class="changeble2 black">
+      <a href="Tutorial.html">
+        <p>&gt; このサイトは何？</p>
+      </a>
+    </footer>
+    <!--/container-->
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+  <!--IE11用-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+  <!--不必要なら削除してください-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+  <!--不必要なら削除してください-->
+  <!--自作のJS-->
+  <script src="js/Black.js"></script>
+  <script src="js/Top-page.js"></script>
+  <script src="js/NavColor.js"></script>
+  <script src="js/footerFixed.js"></script>
+</body>
+
+</html>
